@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply from: '../arouter.gradle'
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //微信
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //QQ
+    implementation files('libs/open_sdk_r6008_lite.jar')
+    api project(':module_base_utils')
+}

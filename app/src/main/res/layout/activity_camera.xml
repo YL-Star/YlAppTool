@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yl.ylapp.camera.CameraActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.yl.module_base_utils.Camera.camerasurfaceview.CameraSurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/Msessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/camera_btn"
+        style="@style/button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="点击签到"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/camera_btn2"
+        style="@style/button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="点击排查"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/LocalImage_btn"
+        style="@style/button_style"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:text="选择相册"
+        android:textSize="16dp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/my_progressbar" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlDrawableArrowSize="20dp"
+            app:srlDrawableMarginRight="20dp"
+            app:srlDrawableProgress="@drawable/refresh_progress"
+            app:srlDrawableProgressSize="20dp"
+            app:srlEnableLastTime="true"
+            app:srlFinishDuration="500"
+            app:srlTextSizeTime="10dp"
+            app:srlTextSizeTitle="16sp"
+            app:srlTextTimeMarginTop="2dp" />
+
+        <!--<WebView
+            android:id="@+id/web_base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/web_base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="签名"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <com.yl.module_view.painterview.PainterView
+        android:id="@+id/painterView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/bg_main" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg_gray" />
+
+        <Button
+            android:id="@+id/Tvcancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/TvSubmint"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

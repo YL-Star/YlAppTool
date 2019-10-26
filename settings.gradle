@@ -1,0 +1,12 @@
+include ':app',
+        ':module_base_net',
+        ':module_webview',
+        ':module_base_utils',
+        ':module_base_common',
+        ':module_share',
+        ':module_base_resoure',
+        ':module_update_app',
+        ':module_base_view',
+        ':module_main',
+        ':test' //,
+//        ':MVP-Dagger2-Retrofit'

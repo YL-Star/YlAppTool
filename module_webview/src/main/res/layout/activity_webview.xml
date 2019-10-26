@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".v1.WebViewActivity">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/my_progressbar" />
+    <!--android:layout_below="@id/top_view"-->
+    <!--<View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/colorAccent" />-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlDrawableArrowSize="20dp"
+            app:srlDrawableMarginRight="20dp"
+            app:srlDrawableProgress="@drawable/refresh_progress"
+            app:srlDrawableProgressSize="20dp"
+            app:srlEnableLastTime="true"
+            app:srlFinishDuration="500"
+            app:srlTextSizeTime="10dp"
+            app:srlTextSizeTitle="16sp"
+            app:srlTextTimeMarginTop="2dp" />
+
+<!--android:layout_below="@id/progressBar"-->
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
