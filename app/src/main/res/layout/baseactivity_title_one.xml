@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+
+    app:contentInsetStart="0dp">
+    <!--android:background="@mipmap/titlebar"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@null"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/TitleNameLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Back"
+            android:text=""
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/TitleNameCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxEms="10"
+            android:text=""
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <ImageButton
+            android:id="@+id/Title_ImageButton_Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:visibility="gone"
+            />
+
+        <ImageButton
+            android:id="@+id/Title_ImageButton_Right_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/Title_ImageButton_Right"
+            android:visibility="gone"
+            android:background="@null"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
