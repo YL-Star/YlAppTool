@@ -10,3 +10,4 @@ include ':app',
         ':module_main',
         ':test' //,
 //        ':MVP-Dagger2-Retrofit'
+include ':openCV411'

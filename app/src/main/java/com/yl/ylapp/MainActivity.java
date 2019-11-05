@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mButton18;
     private Button mButton19;
 
+    private Button mButton20;
+
     //    static {
 //        System.loadLibrary("native-lib");
 //    }
@@ -127,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton18.setOnClickListener(this);
         mButton19 = (Button) findViewById(R.id.button19);
         mButton19.setOnClickListener(this);
+        mButton20 = (Button) findViewById(R.id.button20);
+        mButton20.setOnClickListener(this);
     }
 
     @Override
@@ -322,6 +326,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                            }
 //                        }).show();
                 new ImageUtils(this);
+                break;
+            case R.id.button20:
+                startActivity(new Intent(this,OpenCVTestActivity.class));
                 break;
         }
     }

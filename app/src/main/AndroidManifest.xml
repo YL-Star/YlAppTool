@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".aidl.AidlTestActivity"></activity>
+        <activity android:name=".OpenCVTestActivity"/>
+        <activity android:name=".aidl.AidlTestActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
         <activity android:name=".AutoSizeActivity" />
 
