@@ -117,13 +117,14 @@
             android:id="@+id/button18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text="Dialog" />
 
         <Button
             android:id="@+id/button19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text="拍照" />
+
         <Button
             android:id="@+id/button20"
             android:layout_width="match_parent"
