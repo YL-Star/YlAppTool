@@ -24,3 +24,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api project(':module_base_resoure')
 }
+/*import org.apache.http.*/
+android {
+    useLibrary 'org.apache.http.legacy'
+}
