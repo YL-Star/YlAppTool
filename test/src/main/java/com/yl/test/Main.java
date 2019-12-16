@@ -1,5 +1,6 @@
 package com.yl.test;
 
+
 public class Main {
 
     public void main(String[] args) {
@@ -14,5 +15,6 @@ public class Main {
             }
         }
         System.out.print(num + "");
+
     }
 }
