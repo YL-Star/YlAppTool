@@ -37,6 +37,8 @@
         <activity android:name=".contacts.PhoneListActivity" />
         <activity android:name=".camera.CameraActivity" />
         <activity android:name=".camera.SufaceActivity" />
+        <activity android:name=".dagger2.Test.DaggerTestActivity"/>
+        <activity android:name=".dagger2.Test2.DaggerTest2Activity"/>
     </application>
 
 </manifest>

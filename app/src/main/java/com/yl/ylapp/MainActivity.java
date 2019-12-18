@@ -38,6 +38,7 @@ import com.yl.ylapp.bean.Patch;
 import com.yl.ylapp.camera.CameraActivity;
 import com.yl.ylapp.camera.SufaceActivity;
 import com.yl.ylapp.contacts.PhoneListActivity;
+import com.yl.ylapp.dagger2.Test.DaggerTestActivity;
 
 import java.io.File;
 import java.lang.ref.SoftReference;
@@ -328,7 +329,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new ImageUtils(this);
                 break;
             case R.id.button20:
-                startActivity(new Intent(this,OpenCVTestActivity.class));
+//                startActivity(new Intent(this,OpenCVTestActivity.class));
+                startActivity(new Intent(this, DaggerTestActivity.class));
                 break;
         }
     }
