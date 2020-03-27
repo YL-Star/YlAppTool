@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签号："/>
+            <EditText
+                android:id="@+id/et_bqh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="标签号"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扩展号："/>
+            <EditText
+                android:id="@+id/et_kzh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="扩展号"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="泄漏部位："/>
+            <EditText
+                android:id="@+id/et_xlbw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="泄漏部位"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/noteText"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="  现在请将设备背面靠近标签"
+        />
+    <Button
+        android:id="@+id/writeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ll_input"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:text="开始打入标签" />
+
+</RelativeLayout>

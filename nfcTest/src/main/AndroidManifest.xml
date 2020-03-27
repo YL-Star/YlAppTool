@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.reno.Beam"
+    android:versionCode="1"
+    android:versionName="1.0" >
+<!--
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />-->
+
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- 是否支持谷歌什么硬件一般可以忽略 -->
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.reno.Beam.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="nosensor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <!-- 添加这一条默认设置，能拦截当前页面所有扫描NFC的配置 -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+                  <!--这个过滤条件我就没有使用了-->
+                <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:name=".Write2Nfc"/>
+    </application>
+
+</manifest>
