@@ -8,6 +8,6 @@ include ':app',
         ':module_update_app',
         ':module_base_view',
         ':module_main',
-        ':test' //,
+        ':test', ':nfcTest' //,
 //        ':MVP-Dagger2-Retrofit'
 include ':openCV411'
