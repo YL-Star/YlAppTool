@@ -1,0 +1,577 @@
+//package com.yl.test
+//
+//import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+//import com.hlkj.kotlindemo.net.rand.getApi
+//import com.hlkj.kotlindemo.utils.AES
+//import com.hlkj.kotlindemo.utils.Utils
+//import com.hlkj.kotlindemo.utils.myUtils
+//import kotlinx.coroutines.delay
+//import kotlinx.coroutines.launch
+//import kotlinx.coroutines.runBlocking
+//import org.intellij.lang.annotations.Language
+//import org.json.JSONObject
+//import org.junit.Test
+//
+//import java.io.File
+//import java.net.URLEncoder
+//
+///**
+// * Example local unit test, which will execute on the development machine (host).
+// *
+// * See [testing documentation](http://d.android.com/tools/testing).
+// */
+//class ExampleUnitMyTest {
+//    @Test
+//    fun addition_isCorrect() {
+////        var p = people()
+////        print(p.name + p.age)
+////        var a = "abc"
+////        var b = "abc"
+////        println(a == b)
+////        println(a === b)
+////        var s = ""
+////        println(s.length)
+////        s = "E:\\demo\\kotlinDemo\\app\\src\\main\\java\\kotlindemo\\hlkj\\com\\kotlindemo\\people.kt";
+////        //获取文件名：
+////        println(s.substringAfterLast("\\"))
+////        println(s.substringBefore("\\"))
+////        println(s.substringBeforeLast("\\"))
+//
+//
+//        /**
+//         * ? 可空的类型 相当于是做了if else的判断
+//         *  !!关闭检查，双引号不做检查，强制执行
+//         * ?: Elvis操作符
+//         */
+//
+////        var i:String? = null
+////        var j = i
+////        println(j)//null
+//////        println(j!!.length)//会报错：KotlinNullPointerException
+////        print(j?.length)//null
+//        //同下：
+////        if(j!=null){
+////           return j.length
+////        }else{
+////          return  null
+////        }
+////        println(j?.length?:0)//0
+//        //同下：
+////        if(j!=null){
+////            return j.length
+////        }else{
+////            return  0
+////        }
+////        var x = j!!.toInt()//会报错：KotlinNullPointerException 所以不建议用！！
+//
+////        var a:String? = null
+////       a = "name"
+////        println(a)
+//
+////        println(getage("z"))
+////        println(getage())
+////        var p = 1 to 2
+////        println(p.first)
+////        println(p.second)
+////        var b = Pair("age", 2)
+////        println(b.first + ":" + p.second)
+////        var c = Triple("name", "age", "sex")
+////        println("""
+////            ${c.first}
+////            ${c.second}
+////            ${c.third}
+////             """.trimMargin())
+////        println("""
+////            |${c.first}
+////            |${c.second}
+////            |${c.third}
+////             """.trimMargin("|"))
+////        var e = "湖南.北京.上海.南京.深圳"
+////        val f = e.split(".")
+////        println(f.size)
+////        println(f)
+////        println(if (1 > 0) 2 else 3)
+////        println(getSize(9))
+//        /*************for循环***************/
+////        val str = "abcdefg"
+////        for (c in str) {
+////            if (c == 'c') continue
+////            println(c)
+////        }
+////        println("------------------")
+////        for (c in str) {
+////            if (c == 'c') break
+////            println(c)
+////        }
+////        println("------------------")
+////        for (c in str) {
+////            if (c == 'c') return
+////            println(c)
+////        }
+////        str.forEach {
+////            println("$it")
+////            return
+////            println(it)
+////        }
+////        str.forEachIndexed { index, c ->
+////            println("index=$index c= $c")
+////
+////        }
+//        /*************标签处返回***************/
+////        val s1 = "abcdef"
+////        val s2 = "123456"
+////        id@for (c in s1) {
+////            for (b in s2) {
+////                if (c == 'd' && b == '4')
+//////                    continue
+//////                    break
+////                    break@id//跳出指定的for语句
+////                println("$c $b")
+////
+////            }
+////
+////        }
+//        /*******************区间********************/
+//        var s = 1..100
+//        var s5 = 1.rangeTo(100)
+//        var s6 = IntRange(0, 100)
+//        var s1 = 100 downTo 1
+//        s6.forEach {
+//            println(it)
+//        }
+////        var s3 = 'a'..'z'
+//////        for (i in s) {
+//////            println(i)
+//////        }
+////        for (i in s step 5) {
+////            print("""$i """)
+////        }
+////        s3.forEach {
+////            print(it+" ")
+////
+////        }
+////        println()
+////        s3.forEachIndexed { index, c ->
+////            println("角标：$index  字母：$c")
+////        }
+////        var i = 0
+////        while (i <= 50){
+////            println(i)
+////         i++
+////
+////        }
+////        var x = arrayOf("a", "b", "c")
+////        var z = arrayOf('a', 'b')
+////        var y = arrayOf(true, 'a', "c", 1, 2, 5L)
+////
+////        var m = IntArray(10)
+////        var n = IntArray(5) {
+////            0//默认初始值设置
+////        }
+////        for (i in x) {
+////            println(i)
+////        }
+////        y[0] = false//修改
+//////        y[6] = 6 //添加---报错
+////
+////        y.forEach {
+////            print(it)
+////        }
+////        var name = arrayListOf<String>("张三", "李斯", "王五", "王八", "王五")
+////        println(name.first())
+////        //第一个姓王的角标
+////        println(name.indexOfFirst {
+////            it.startsWith("王")
+////        })
+////        //第一个姓王的名称
+////        println(name.first {
+////            it.startsWith("王")
+////        })
+////
+////        //第一个叫王八的角标
+////        println(name.indexOfFirst {
+////            it == "王八"
+////        })
+////方法重载
+////        dohttp("http://m.qq.com/", "GET")
+////        dohttp2("http://m.qq.com/")
+////        //具名参数
+////        dohttp(url = "http://m.qq.com/", method = "POST")
+////        dohttp(method = "POST", url = "http://m.qq.com/")
+////        dohttp2(url = "http://m.qq.com/")
+////        dohttp2(method = "POST", url = "http://m.qq.com/")
+////        TestJava.dom(1, 2, 3, 4, 5, 6)
+//        var a = 1..9
+////        doms(a)
+//        dohttpPublic(1, 2, 3)
+//        dohttpPublic()
+//        var file = File("a.txt")
+//
+////        BufferedReader(FileReader(file))
+////        try {
+////            BufferedReader(FileReader(file))
+////        } catch (e: Exception) {
+////            e.printStackTrace()
+////            println("文件异常：${e.toString()}")
+////        }
+//
+//        println("-----------")
+////        println(sex(5))
+////        sex3()
+////        println(add(1000000))//递归缺点：java.lang.StackOverflowError占内存溢出
+//        println(add2(1000000))//迭代方式
+//        //尾递归优化
+//
+//    }
+//
+//
+//    private fun doms(a: IntRange) {
+//        println("a.first:${a.first}-a.last:${a.last}\n")
+//        a.forEach { print(it) }
+//
+//    }
+//
+//
+//    fun getage() {
+//        return
+//    }
+//
+//    fun getage(age: String): Int {
+//        return age.length
+//    }
+//
+//    fun getSize(i: Int): Int {
+//        return if (i > 7) 3 else 4
+//    }
+//
+//    fun add3(a: Int, b: Int) = a + b
+//    fun dohttp(url: String, method: String) {
+//        println("请求地址：$url,请求方式：$method")
+//    }
+//
+//    fun dohttp2(url: String, method: String = "GET") {
+//        println("请求地址：$url,请求方式：$method")
+//    }
+//
+//    fun dohttpPublic(vararg a: Int) {
+//        a.forEach {
+//            println("a:" + it)
+//        }
+//    }
+//
+//    //递归
+//    fun sex(i: Int): Int {
+//        if (i == 1) {
+//            return 1
+//        } else {
+//            return sex(i - 1) * i
+//        }
+//
+//    }
+//
+//    fun sex3() {
+//        //1 1 2 3 5 8 13
+//        var x = 1
+//        var y = 1
+//        print("1 1 ")
+//        var a = 0
+//        while ((x + y) < 500) {
+//            a = x + y
+//            print(a)
+//            print(" ")
+//            x = y
+//            y = a
+//        }
+//    }
+//
+//    //    5:5+4+3+2+1
+//    //n:n+(n-1)+(n-2)
+//    fun add(i: Int): Int {
+//        if (i == 1) {
+//            return 1
+//        } else {
+//            return i + add(i - 1)
+//        }
+//
+//    }
+//
+//    fun add2(i: Int): Int {
+//        var s = 0
+//        var i = i
+//        while (i > 0) {
+//            s = s + i - 1
+//            i--
+//        }
+//        return s
+//    }
+//
+//    //运算符重载
+//    @Test
+//    fun test2() {
+//
+////        var gril = Gril()
+////        println(gril.name + gril.age)
+////        //运算符重载
+////        println(gril + 30)
+////        println(gril + gril.age)
+//        var t = Teacher()
+//        println("${t.schoolname}-等级：${t.leve}，薪资：${t.sala}")
+//        t++
+//        println("${t.schoolname}-等级：${t.leve}，薪资：${t.sala}")
+//        t++
+//        println("${t.schoolname}-等级：${t.leve}，薪资：${t.sala}")
+//    }
+//
+//    class Gril {
+//        var name: String = "爱华"
+//        var age: Int = 10
+//        operator fun plus(age: Int): Int {
+//            return this.age + age
+//        }
+//    }
+//
+//    class Teacher {
+//        var schoolname = "南京市三小"
+//            private set //将schoolname的set方法设置为私有，外部就只能获取不能修改了。
+//
+//        var leve = 1
+//        var sala = 5000
+//        //重写i++方法，对象++的时候会在这个重载
+//        operator fun inc(): Teacher {
+//            leve++
+//            sala += 1000
+//            return this
+//        }
+//    }
+//
+//    @Test
+//    fun test() {
+//        var hua = Human("0", "小花", 12, "女")
+//        var hua2 = Human("0", "小花", 12, "女")
+//        println(hua == hua2)
+//        var xiaoming = Human("0", "小明", 12)
+//
+//        println(hua.name + ":" + hua.age)
+//        hua.age = 13
+//        hua.hobby = "游泳"
+////        hua.food="西餐"//报错，set设置为私有方法后不能调用
+//        println(hua.name + ":" + hua.age)
+//        println(hua.toString())
+//        println(xiaoming.name + ":" + xiaoming.age)
+//
+//        var cat2 = Cat("白色", 2)
+//
+//        println(cat2.toString())
+//
+//    }
+//
+//    class Human(id: String, val name: String, var age: Int, sex: String = "男") {
+//        var hobby = ""
+//        var food = "中餐"
+//            private set
+//
+//        override fun toString(): String {
+//            return "Human(name='$name', age=$age, hobby='$hobby', food='$food')"
+//        }
+//
+//
+//    }
+//
+//    abstract class animal {
+//        var id = 0
+//        open var name = "动物"
+//        abstract var age: Int
+//        open var food = "草：肉：杂食"
+//        override fun toString(): String {
+//            return "animal(id=$id, name='$name', age=$age, food='$food')"
+//        }
+//
+//
+//    }
+//
+//    class Cat(var color: String, var weight: Int) : animal(), Language, Action {
+//        override fun speak() {
+//            println("喵喵叫")
+//        }
+//
+//        override fun action() {
+//            println("catch mouse")
+//        }
+//
+//
+//        override var age: Int = 0//
+//        override var name = "猫"
+//        override var food = "老鼠"
+//        override fun toString(): String {
+//            return "Cat(color='$color', weight=$weight)" + super.toString()
+//        }
+//
+//
+//    }
+//
+//    interface Language {
+//        fun speak()
+//    }
+//
+//    interface Action {
+//        fun action() {
+//            println("活动")
+//        }
+//    }
+//
+////    @Test
+////    fun test4() {
+////        val p = People()
+////        p.age = 180
+////        println(p.age)
+////    }
+//
+//    class People {
+//        var name: String? = null
+//        var age: Int = 1
+//            set(value) {
+//                if (value > 150) {
+//                    this.age = value  //会报错,内存溢出
+//
+//                }
+//            }
+//    }
+//
+//    @Test
+//    fun test5() {
+//        var list = ArrayList<Int>()
+//        list.add(5)
+//        list.add(6)
+//        setList(list)
+//        setList2(list)
+//        setList3(list)
+//    }
+//
+//    fun setList(list: ArrayList<*>) {
+//        println(list.size)
+//    }
+//
+//    fun <T> setList2(list: ArrayList<out T>) {//out 子类到t
+//        println(T::class.java.name)//int
+//    }
+//
+//    fun <T> setList3(list: ArrayList<in T>) {//in t到t的父类
+//        println(T::class.java.name)//int
+//    }
+//
+//    @Test
+//    fun test6() {
+////        中缀表达式 infix
+//        var islogin = MyTest isLogin "15888"
+////        方式一、类委托 by bigheadSun()
+//        var smallheadFather = smallheadFather()
+//        smallheadFather.wash()
+////        方式二、类委托 只要有洗碗能力的都可以传参过去
+//        smallheadFather2(smallheadSun()).wash()
+//
+//        //属性委托---儿子问妈妈要压岁钱
+//        var sun = Sun()
+//        sun.money = 50 //儿子存钱50 妈妈40
+//        println(sun.money)//儿子取钱
+//
+//
+//    }
+//
+//    interface dox {
+//        fun wash()
+//    }
+//
+//    class smallheadFather : dox by bigheadSun() {
+////        override fun wash() {
+////            println("小头爸爸洗碗")
+////        }
+//
+//    }
+//
+//    //
+//    class smallheadFather2(var dox: dox) : dox by dox
+//
+//    class bigheadSun : dox {
+//        override fun wash() {
+//            println("大头儿子洗碗")
+//        }
+//    }
+//
+//    class smallheadSun : dox {
+//        override fun wash() {
+//            println("小头儿子洗碗")
+//        }
+//    }
+//
+//    fun wash() {
+//
+//    }
+//
+//    @Test
+//    fun test7() {
+//        P.age = 30
+//        println(P.age)
+//        println(Utils.instance.name)
+//        val arr = ArrayList<String>()
+//        var list = arrayListOf(1, 2, 4)
+//        var list2 = mutableListOf<String>()
+//        list2.add("张三")
+//        val map = HashMap<Int, String>()
+//        map.put(1, "张三")
+//        val map1 = mapOf(1 to "南京", 2 to "常州")
+//        map1.forEach { t, u ->
+//            println("key=$t value=$u")
+//        }
+//    }
+//
+//    class P {
+//        var name = ""
+//
+//        companion object {
+//            var age = 20
+//        }
+//    }
+//
+//    @Test
+//    fun test8() {
+//        var d = dod()
+//        d()  //1
+//        d()  //2
+//        d()  //3
+//        d()  //4
+//        d()  //5
+//    }
+//
+//    //闭包
+//    fun dod(): () -> Unit {
+//        var a = 0
+//        return {
+//            a++
+//            println(a)
+//        }
+//    }
+//
+////    @Test
+////    fun test9() {//高阶函数
+////        var add = dom(3, 5) { m, n ->
+////            m + n
+////        }
+////        var add2 = dom(3, 5) { m, n ->
+////            m - n
+////        }
+////        println(add)
+////        println(add2)
+////        var job = JSONObject()
+////        job.put("phone", "15366153")
+////        println(AES.Decrypt("bhhcpdgjhbddnfhckcibbjfkpkpkcnmoifcpmdkigcakbabloodgebmbanjclhifkkhdeifcohfelnedajfghllkchmlpmih"))
+////
+////    }
+//
+//    fun dom(a: Int, b: Int, block: (Int, Int) -> Int): Int {
+//        return block(a, b)
+//    }
+//
+//}
+//
+//
+//
